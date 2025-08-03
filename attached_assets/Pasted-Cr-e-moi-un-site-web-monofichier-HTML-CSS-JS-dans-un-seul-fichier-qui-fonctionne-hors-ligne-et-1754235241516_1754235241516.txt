@@ -1,0 +1,79 @@
+Crée-moi un site web monofichier (HTML + CSS + JS dans un seul fichier) qui fonctionne hors ligne et que je peux héberger sur GitHub ou ouvrir dans un navigateur sans serveur.
+
+Ce site est un catalogue de vente de produits via WhatsApp, structuré en trois rubriques :
+
+Rubrique 1 : Articles disponibles
+Ce sont les articles actuellement en stock dans les entrepôts de l'entreprise.
+
+Chaque article affichera :
+
+Une image illustrative
+
+Un titre
+
+Un prix
+
+Deux boutons :
+
+"Ajouter au panier"
+
+"Passer à l'achat sur WhatsApp" (avec logo WhatsApp)
+
+Rubrique 2 : Articles à avoir uniquement sous commande spéciale
+Ces articles ne sont pas en stock, mais peuvent être commandés.
+
+Un message bien visible avant la liste des articles :
+"⚠ Ces articles ne sont pas en stock. Pour toute commande spéciale, un acompte de 25% du montant total est requis pour confirmation."
+
+Chaque article affichera :
+
+Une image illustrative
+
+Un titre
+
+Un prix
+
+Deux boutons :
+
+"Ajouter au panier"
+
+"Commander sur WhatsApp" (avec logo WhatsApp)
+
+Rubrique 3 : Livres adultes (interdits aux moins de 18 ans)
+Avertissement bien visible :
+"⚠ Contenu adulte. Il s'agit de livres numériques. L'acheteur recevra son exemplaire uniquement après paiement."
+
+Même logique d'affichage que les deux autres rubriques.
+
+Images libres de droit.
+
+PANIER & WHATSAPP
+Un bouton flottant "Voir le panier" toujours visible même quand on scrolle.
+
+Lorsque le client valide le panier :
+
+Tous les articles sont regroupés en deux parties :
+
+Articles disponibles
+
+Articles spéciaux (commande uniquement)
+
+Pour chaque article sélectionné :
+
+Nom
+
+Prix
+
+Lien vers l’image (ou image cliquable)
+
+Un lien WhatsApp est généré automatiquement avec le message pré-rempli contenant la liste triée par type.
+
+INTERACTIVITÉ & ADAPTATION
+Le site doit être 100% responsive (adapté à toutes tailles d’écran : smartphone, tablette, PC).
+
+Je dois pouvoir ajouter, modifier ou supprimer facilement les articles dans le catalogue sans toucher au code source.
+
+Utilise un fichier catalogue.json ou autre méthode simple pour cela.
+
+EXEMPLES D’IMAGES
+Utilise des images d’exemple libres de droit pour illustrer chaque rubrique (au moins 2 articles par rubrique).
