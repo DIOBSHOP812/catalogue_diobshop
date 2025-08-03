@@ -1,6 +1,12 @@
 # Overview
 
-This is a single-file e-commerce catalog website for selling products through WhatsApp integration. The application displays products in three distinct categories: available items, special order items, and adult content books. Built as a monolithic HTML file with embedded CSS and JavaScript, it's designed to work offline and can be hosted on static platforms like GitHub Pages or opened directly in a browser without requiring a server.
+This is a single-file e-commerce catalog website for DIOB SHOP, specializing in adult products and various items sold through WhatsApp integration. The application displays products in three distinct categories: available items, special order items, and adult content books. Built as a monolithic HTML file with embedded CSS and JavaScript, it's designed to work offline and can be hosted on static platforms like GitHub Pages or opened directly in a browser without requiring a server.
+
+## Brand Identity
+- **Company Name**: DIOB SHOP
+- **Slogan**: "Le marché central des sextoys et divers en ligne"
+- **Logo**: Custom branded logo integrated in header with shopping cart icon design
+- **Focus**: Adult products and various online items with WhatsApp ordering system
 
 # User Preferences
 

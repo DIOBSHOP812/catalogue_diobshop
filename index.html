@@ -33,6 +33,30 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .header-text {
+            text-align: left;
+        }
+
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
@@ -41,7 +65,15 @@
 
         header p {
             font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .whatsapp-subtitle {
+            font-size: 1rem;
             opacity: 0.9;
+            font-style: italic;
         }
 
         .section {
@@ -363,12 +395,29 @@
         }
 
         @media (max-width: 768px) {
+            .header-content {
+                gap: 1rem;
+            }
+
+            .logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .header-text {
+                text-align: center;
+            }
+
             header h1 {
                 font-size: 2rem;
             }
 
             header p {
                 font-size: 1rem;
+            }
+
+            .whatsapp-subtitle {
+                font-size: 0.9rem;
             }
 
             .products-grid {
@@ -443,8 +492,14 @@
 <body>
     <header>
         <div class="container">
-            <h1><i class="fab fa-whatsapp"></i> Catalogue WhatsApp</h1>
-            <p>Boutique en ligne - Commandez directement via WhatsApp</p>
+            <div class="header-content">
+                <img src="attached_assets/Logo_du_logiciel_Diobshop_1754235907626.png" alt="DIOB SHOP Logo" class="logo">
+                <div class="header-text">
+                    <h1><i class="fab fa-whatsapp"></i> DIOB SHOP</h1>
+                    <p>Le marché central des sextoys et divers en ligne</p>
+                    <span class="whatsapp-subtitle">Commandez directement via WhatsApp</span>
+                </div>
+            </div>
         </div>
     </header>
 
