@@ -1,0 +1,80 @@
+{
+  "available": [
+    {
+      "id": "prod-001",
+      "title": "Écouteurs Bluetooth Premium",
+      "price": "79.99",
+      "image": "https://pixabay.com/get/g5ef525db8fcc9629310f7376f0f69e858437c2501689a485affa2caa8380c79912046c1797708af1609f40e452fd6dfa72d60066c8427552456329f9d8039dbd_1280.jpg"
+    },
+    {
+      "id": "prod-002",
+      "title": "Casque Audio Professionnel",
+      "price": "129.99",
+      "image": "https://pixabay.com/get/g73bfd75a5d3c240013e1458f9ef4d6d3948ce65249bc1ab2b2d98dbba5946f5d4e8f2878ac6d28c8e666f690d581482e5973353483ca7705054a101ca6a6f712_1280.jpg"
+    },
+    {
+      "id": "prod-003",
+      "title": "Montre Connectée Sport",
+      "price": "199.99",
+      "image": "https://pixabay.com/get/ge78ed129b6b83dfe827a7845e9a1b33c26a067c568d9847f37e265b05ef7c67d51b492fe78635ea272f92aa1552cdbc10dca3d3294e2ff49ca713ff7f72bca67_1280.jpg"
+    },
+    {
+      "id": "prod-004",
+      "title": "Smartphone Dernière Génération",
+      "price": "699.99",
+      "image": "https://pixabay.com/get/g32a80db918deeff5c52db95dc559638a06985d596b55da371667bb52184a16e5eca7084eeb4f3a3703241639dc916eefa1960782fadd21ecd38ba766aec0cf47_1280.jpg"
+    }
+  ],
+  "special": [
+    {
+      "id": "spec-001",
+      "title": "Ordinateur Portable Gaming",
+      "price": "1299.99",
+      "image": "https://pixabay.com/get/gf28e0e8e879f475884b5a9b80ccec9bc973f1e850c5c27a35bc1a2ea62e81134d1ffa3a2360fedcb8bf45d4e88b7231f1cd3a77bf8c0d632425b36f5fac4e63c_1280.jpg"
+    },
+    {
+      "id": "spec-002",
+      "title": "Caméra Professionnelle 4K",
+      "price": "2199.99",
+      "image": "https://pixabay.com/get/geeb48a71abbed16a25f80634401cbab901eff1a7bff1059a7de346829153faa71dda1c04c7cf0678a0a67e74a99cade09b8c055981e324d19c333815b1738137_1280.jpg"
+    },
+    {
+      "id": "spec-003",
+      "title": "Console de Jeux Next-Gen",
+      "price": "499.99",
+      "image": "https://pixabay.com/get/gb704a026706392c3ba82ef3c6568404631109e8a144b0ee4ea1aa7e3cb44e7117fe5e87e5a890f426f24e47a7e9e7abe8aa70a2bbabbd64ff5518d06174b3498_1280.jpg"
+    },
+    {
+      "id": "spec-004",
+      "title": "Drone Professionnel avec Caméra",
+      "price": "899.99",
+      "image": "https://pixabay.com/get/ga2b134468ef9f4f03f0e1178e2ec55e6a4156088958d16f6ed4cc65c7cd6a0825f372cbcb6eaae11e3d72c383d51eae2245c53df4ae49010ffc2e5ef1e24b0ef_1280.jpg"
+    }
+  ],
+  "adult": [
+    {
+      "id": "adult-001",
+      "title": "Romance Érotique - Collection Numérique",
+      "price": "12.99",
+      "image": "https://pixabay.com/get/g4c6965b728a4d19d4e64c279d709fdb814ab59d44a87274c07f7e55a749c3c8f6e31d545bb84decd205d66c942dbbfd0a3c5c440a63cdec319f2d610fa69f51b_1280.jpg"
+    },
+    {
+      "id": "adult-002",
+      "title": "Guide Intime - Édition Premium",
+      "price": "19.99",
+      "image": "https://pixabay.com/get/g724ea3794e337cf54c7dcefbceaa222509798f8a520f15890ddea2026482ef0dd16c0b95585edc935535b7aa8dd8ce1cf5c0826f63e4a7593f1b78f3b7a0ccbf_1280.jpg"
+    },
+    {
+      "id": "adult-003",
+      "title": "Recueil de Nouvelles Adultes",
+      "price": "15.99",
+      "image": "https://pixabay.com/get/gb6d3890341925cffb4fe4a9b48c2292d06565b8b8a27cfa8d5a5c86d462cdebbcb0efb6c0535dcb26c7f51aaeac9b0868d99c1c38ec36a867dd9a4a1538f3a7e_1280.jpg"
+    },
+    {
+      "id": "adult-004",
+      "title": "Magazine Numérique Premium",
+      "price": "9.99",
+      "image": "https://pixabay.com/get/gd88d2e0937bb94572b02e16877b2353330c4dfb9b7bd1b13009f029248bc45dac81b5306308738dc0168181d94ea8d2fb8ad48d690395b4f805b145cae867dc3_1280.jpg"
+    }
+  ]
+}
