@@ -562,6 +562,9 @@
                 <p>Chargement des articles...</p>
             </div>
             <div class="products-grid" id="available-products"></div>
+            <div class="section-note">
+                <i class="fas fa-info-circle"></i> Remarque : Au-delà de ces articles à caractère érotique, nous organisons la commande de tout type de produit pour nos clients. Il vous suffit de nous envoyer l’image du ou des produits souhaités, et nous vous proposerons nos prix et conditions. Merci pour votre confiance !
+            </div>
         </section>
 
         <!-- Section 2: Articles sur commande spéciale -->
@@ -578,6 +581,9 @@
                 <p>Chargement des articles...</p>
             </div>
             <div class="products-grid" id="special-products"></div>
+            <div class="section-note">
+                <i class="fas fa-info-circle"></i> Remarque : Au-delà de ces articles à caractère érotique, nous organisons la commande de tout type de produit pour nos clients. Il vous suffit de nous envoyer l’image du ou des produits souhaités, et nous vous proposerons nos prix et conditions. Merci pour votre confiance !
+            </div>
         </section>
 
         <!-- Section 3: Livres adultes -->
@@ -594,8 +600,15 @@
                 <p>Chargement des articles...</p>
             </div>
             <div class="products-grid" id="adult-products"></div>
+            <div class="section-note">
+                <i class="fas fa-info-circle"></i> Remarque : Au-delà de ces articles à caractère érotique, nous organisons la commande de tout type de produit pour nos clients. Il vous suffit de nous envoyer l’image du ou des produits souhaités, et nous vous proposerons nos prix et conditions. Merci pour votre confiance !
+            </div>
         </section>
     </main>
+    <div class="section-note" style="margin: 2rem auto; max-width: 700px; text-align: center; font-size: 1.1rem; color: #333; background: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); padding: 1.5rem;">
+        <i class="fas fa-info-circle" style="color: #007bff; margin-right: 8px;"></i>
+        <strong>Remarque :</strong> Au-delà de ces articles à caractère érotique, nous organisons la commande de tout type de produit pour nos clients. Il vous suffit de nous envoyer l’image du ou des produits souhaités, et nous vous proposerons nos prix et conditions. Merci pour votre confiance !
+    </div>
 
     <!-- Pied de page -->
     <footer>
@@ -639,10 +652,15 @@
 
     <script>
         class WhatsAppCatalog {
+            // Fonction utilitaire pour parser le prix en nombre (supprime espaces et non-chiffres)
+            static parsePrice(priceStr) {
+                if (!priceStr) return 0;
+                return parseInt((priceStr + '').replace(/\D/g, ''), 10) || 0;
+            }
             constructor() {
                 this.cart = JSON.parse(localStorage.getItem('whatsapp-cart') || '[]');
                 this.catalog = null;
-                this.whatsappNumber = '+33123456789'; // Numéro WhatsApp à personnaliser
+                this.whatsappNumber = '+242053538781'; // Numéro WhatsApp à personnaliser
                 this.init();
             }
 
@@ -692,7 +710,7 @@
                         <img src="${product.image}" alt="${product.title}" class="product-image" loading="lazy">
                         <div class="product-info">
                             <h3 class="product-title">${product.title}</h3>
-                            <div class="product-price">${product.price}€</div>
+                            <div class="product-price">${product.price}</div>
                             <div class="product-buttons">
                                 <button class="btn btn-secondary" onclick="catalog.addToCart('${product.id}', '${category}')">
                                     <i class="fas fa-cart-plus"></i>
@@ -802,7 +820,7 @@
                                 <img src="${item.image}" alt="${item.title}">
                                 <div class="cart-item-info">
                                     <div class="cart-item-title">${item.title}</div>
-                                    <div class="cart-item-price">${item.price}€</div>
+                                    <div class="cart-item-price">${item.price}</div>
                                     <div class="cart-item-category">${categoryNames[category]}</div>
                                 </div>
                                 <button class="remove-item" onclick="catalog.removeFromCart('${item.id}')">
@@ -815,8 +833,8 @@
 
                 cartItems.innerHTML = html;
 
-                const total = this.cart.reduce((sum, item) => sum + parseFloat(item.price), 0);
-                cartTotal.innerHTML = `Total: ${total.toFixed(2)}€`;
+                const total = this.cart.reduce((sum, item) => sum + WhatsAppCatalog.parsePrice(item.price), 0);
+                cartTotal.innerHTML = `Total: ${total.toLocaleString('fr-FR')} FCFA`;
             }
 
             buyNow(productId, category) {
@@ -850,18 +868,18 @@
                     adult: '📚 *Livres Adultes*'
                 };
 
-                let total = 0;
 
+                let total = 0;
                 Object.entries(grouped).forEach(([category, categoryItems]) => {
                     message += `${categoryNames[category]}\n`;
-                    
+                    const siteUrl = window.location.origin;
                     categoryItems.forEach(item => {
                         message += `• ${item.title}\n`;
-                        message += `  Prix: ${item.price}€\n`;
-                        message += `  Image: ${item.image}\n\n`;
-                        total += parseFloat(item.price);
+                        message += `  Prix: ${item.price} FCFA\n`;
+                        message += `  Image: ${item.image}\n`;
+                        message += `  Voir le produit : ${siteUrl}/#${item.id}\n\n`;
+                        total += WhatsAppCatalog.parsePrice(item.price);
                     });
-
                     // Messages spéciaux par catégorie
                     if (category === 'special') {
                         message += "⚠️ *Acompte requis: 25% du montant total*\n\n";
@@ -869,8 +887,8 @@
                         message += "🔞 *Livraison après paiement complet*\n\n";
                     }
                 });
-
-                message += `💰 *Total: ${total.toFixed(2)}€*\n\n`;
+                message += `💰 *Total: ${total.toLocaleString('fr-FR')} FCFA*\n\n`;
+                message += `Voir le panier complet : ${window.location.origin}/#panier\n`;
                 message += "Merci de confirmer votre commande ! 😊";
 
                 return encodeURIComponent(message);

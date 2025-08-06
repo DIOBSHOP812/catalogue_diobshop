@@ -2,79 +2,535 @@
   "available": [
     {
       "id": "prod-001",
-      "title": "Écouteurs Bluetooth Premium",
-      "price": "79.99",
-      "image": "https://pixabay.com/get/g5ef525db8fcc9629310f7376f0f69e858437c2501689a485affa2caa8380c79912046c1797708af1609f40e452fd6dfa72d60066c8427552456329f9d8039dbd_1280.jpg"
+      "title": "Anneau glande",
+      "price": "3000 FCFA",
+      "image": "images_produits/Articles_disponibles/Anneau glande.jpg"
     },
     {
       "id": "prod-002",
-      "title": "Casque Audio Professionnel",
-      "price": "129.99",
-      "image": "https://pixabay.com/get/g73bfd75a5d3c240013e1458f9ef4d6d3948ce65249bc1ab2b2d98dbba5946f5d4e8f2878ac6d28c8e666f690d581482e5973353483ca7705054a101ca6a6f712_1280.jpg"
+      "title": "kit de penetration anal",
+      "price": "5000 FCFA",
+      "image": "images_produits/Articles_disponibles/DM53_18GJL-kit de penetration anal.jpg"
     },
     {
       "id": "prod-003",
-      "title": "Montre Connectée Sport",
-      "price": "199.99",
-      "image": "https://pixabay.com/get/ge78ed129b6b83dfe827a7845e9a1b33c26a067c568d9847f37e265b05ef7c67d51b492fe78635ea272f92aa1552cdbc10dca3d3294e2ff49ca713ff7f72bca67_1280.jpg"
+      "title": "Anti-ejaculation precoce type 2",
+      "price": "10.000 FCFA",
+      "image": "images_produits/Articles_disponibles/DQ83_Anti-ejaculation precoce type 2.jpg"
     },
     {
       "id": "prod-004",
-      "title": "Smartphone Dernière Génération",
-      "price": "699.99",
-      "image": "https://pixabay.com/get/g32a80db918deeff5c52db95dc559638a06985d596b55da371667bb52184a16e5eca7084eeb4f3a3703241639dc916eefa1960782fadd21ecd38ba766aec0cf47_1280.jpg"
+      "title": "Godmichet simple",
+      "price": "16500 FCFA",
+      "image": "images_produits/Articles_disponibles/JJ58_GS12-Godmichet simple.png"
+    },
+    {
+      "id": "prod-005",
+      "title": "Anneau penien type 1",
+      "price": "5000 FCFA",
+      "image": "images_produits/Articles_disponibles/JP93_AL9G-Anneau penien type 1.png"
+    },
+    {
+      "id": "prod-006",
+      "title": "Vibro trois tetes vibrant",
+      "price": "11.000 FCFA",
+      "image": "images_produits/Articles_disponibles/JW11_8QKL-Vibro trois tetes vibrant.jpg"
+    },
+    {
+      "id": "prod-007",
+      "title": "Kit de menottes",
+      "price": "12500 FCFA",
+      "image": "images_produits/Articles_disponibles/Kit de menottes .png"
+    },
+     {
+      "id": "prod-008",
+      "title": "Anneau penien vibrant type 2",
+      "price": "6000 FCFA",
+      "image": "images_produits/Articles_disponibles/KM91_XGH3-Anneau penien vibrant type 2.png"
+    },
+     {
+      "id": "prod-009",
+      "title": "Preservatif reutilisable type 1",
+      "price": "5000 FCFA",
+      "image": "images_produits/Articles_disponibles/Preservatif reutilisable type 1.png"
+    },
+     {
+      "id": "prod-0010",
+      "title": "Excitant d'orgasme femme",
+      "price": "11.000 FCFA",
+      "image": "images_produits/Articles_disponibles/TKLW5_Excitant d'orgasme femme.png"
+    },
+     {
+      "id": "prod-0011",
+      "title": "Vibro regarcheable poisson type 2",
+      "price": "14 000 FCFA",
+      "image": "images_produits/Articles_disponibles/VH27_WS4T-Vibro regarcheable poisson type 2.png"
+    },
+     {
+      "id": "prod-0012",
+      "title": "Vibro 2 vagues à pile",
+      "price": "13 000 FCFA",
+      "image": "images_produits/Articles_disponibles/Vibro 2 vagues à pile.png"
+    },
+     {
+      "id": "prod-0013",
+      "title": "Vibro 2 vagues max type 5",
+      "price": "17 000 FCFA",
+      "image": "images_produits/Articles_disponibles/Vibro 2 vagues max type 5.png"
+    },
+     {
+      "id": "prod-0014",
+      "title": "Vibro 2 vagues pro max 1",
+      "price": "22 000 FCFA",
+      "image": "images_produits/Articles_disponibles/Vibro 2 vagues pro max 1.png"
+    },
+     {
+      "id": "prod-0015",
+      "title": "Vibro 2 vagues Rechargeable",
+      "price": "16 000 FCFA",
+      "image": "images_produits/Articles_disponibles/Vibro 2 vagues Rechargeable.png"
+    },
+     {
+      "id": "prod-0016",
+      "title": "Vibro doigtier long",
+      "price": "7 000 FCFA",
+      "image": "images_produits/Articles_disponibles/Vibro doigtier long.png"
+    },
+     {
+      "id": "prod-0017",
+      "title": "Vibro inter max sans fil 1",
+      "price": "16 000 FCFA",
+      "image": "images_produits/Articles_disponibles/Vibro inter max sans fil 1.png"
+    },
+     {
+      "id": "prod-0018",
+      "title": "Vibro inter max sans fil 2",
+      "price": "14 000 FCFA",
+      "image": "images_produits/Articles_disponibles/Vibro inter max sans fil 2.png"
+    },
+     {
+      "id": "prod-0019",
+      "title": "Vibro masturbateur à pile",
+      "price": "16 500",
+      "image": "images_produits/Articles_disponibles/Vibro masturbateur à pile.png"
+    },
+     {
+      "id": "prod-0020",
+      "title": "Vibro max sans fil type 4",
+      "price": "16 500 FCFA",
+      "image": "images_produits/Articles_disponibles/Vibro max sans fil type 4.png"
+    },
+     {
+      "id": "prod-0021",
+      "title": "Vibro micro à pile simple",
+      "price": "11 000 FCFA",
+      "image": "images_produits/Articles_disponibles/Vibro micro à pile simple.png"
+    },
+     {
+      "id": "prod-0022",
+      "title": "Vibro oeuf à fil et piles",
+      "price": "9 000 FCFA",
+      "image": "images_produits/Articles_disponibles/Vibro oeuf à fil et piles.png"
+    },
+     {
+      "id": "prod-0023",
+      "title": "Lubrifiant sexuel naturel à base de l'eau",
+      "price": "8 000 FCFA",
+      "image": "images_produits/Articles_disponibles/VZ40_QZD2-Lubrifiant sexuel.jpg"
+    },
+     {
+      "id": "prod-0024",
+      "title": "Boule de geish",
+      "price": "5 000 FCFA",
+      "image": "images_produits/Articles_disponibles/X71_2KQD-Boule de geish.png"
+    },
+    {
+      "id": "prod-0025",
+      "title": "Menotte simple",
+      "price": "5000 FCFA",
+      "image": "images_produits/Articles_disponibles/XS72_PMM9-Petite menotte simple.png"
+    },
+    {
+      "id": "prod-0026",
+      "title": "Vibro micro rechargeable type 1",
+      "price": "15 500 FCFA",
+      "image": "images_produits/Articles_disponibles/ZJ10_VLMR1-Vibro long rechargeable type 1.png"
     }
   ],
   "special": [
     {
       "id": "spec-001",
-      "title": "Ordinateur Portable Gaming",
-      "price": "1299.99",
-      "image": "https://pixabay.com/get/gf28e0e8e879f475884b5a9b80ccec9bc973f1e850c5c27a35bc1a2ea62e81134d1ffa3a2360fedcb8bf45d4e88b7231f1cd3a77bf8c0d632425b36f5fac4e63c_1280.jpg"
+      "title": "Cousin erotique 1",
+      "price": "9 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Cousin erotique 1.jpg"
     },
     {
       "id": "spec-002",
-      "title": "Caméra Professionnelle 4K",
-      "price": "2199.99",
-      "image": "https://pixabay.com/get/geeb48a71abbed16a25f80634401cbab901eff1a7bff1059a7de346829153faa71dda1c04c7cf0678a0a67e74a99cade09b8c055981e324d19c333815b1738137_1280.jpg"
+      "title": "Cousin erotique 2",
+      "price": "10 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Cousin erotique 2.jpg"
     },
     {
       "id": "spec-003",
-      "title": "Console de Jeux Next-Gen",
-      "price": "499.99",
-      "image": "https://pixabay.com/get/gb704a026706392c3ba82ef3c6568404631109e8a144b0ee4ea1aa7e3cb44e7117fe5e87e5a890f426f24e47a7e9e7abe8aa70a2bbabbd64ff5518d06174b3498_1280.jpg"
+      "title": "Covret sextoys max 1",
+      "price": "45 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Covret sextoys max 1.jpg"
     },
     {
       "id": "spec-004",
-      "title": "Drone Professionnel avec Caméra",
-      "price": "899.99",
-      "image": "https://pixabay.com/get/ga2b134468ef9f4f03f0e1178e2ec55e6a4156088958d16f6ed4cc65c7cd6a0825f372cbcb6eaae11e3d72c383d51eae2245c53df4ae49010ffc2e5ef1e24b0ef_1280.jpg"
+      "title": "Covret sextoys type 1",
+      "price": "55 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Covret sextoys type 1.jpg"
+    },
+    {
+      "id": "spec-006",
+      "title": "Covret sextoys type 2",
+      "price": "50 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Covret sextoys type 2.jpg"
+    },
+    {
+      "id": "spec-007",
+      "title": "Ensemble Boules de geish vibrant sans fil",
+      "price": "20 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Ensemble Boules de geish vibrant sans fil.png"
+    },
+    {
+      "id": "spec-008",
+      "title": "Extenseur de penis vibrant",
+      "price": "19 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Extenseur de penis vibrant.png"
+    },
+    {
+      "id": "spec-009",
+      "title": "Fauteuil tantra gonflable type 1",
+      "price": "70 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Fauteuil tantra gonflable type 1.png"
+    },
+    {
+      "id": "spec-010",
+      "title": "Fauteuil tantra gonflable type 2",
+      "price": "80 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Fauteuil tantra gonflable type 2.png"
+    },
+    {
+      "id": "spec-011",
+      "title": "Fauteuil tantra gonflable type 3",
+      "price": "80 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Fauteuil tantra gonflable type 3.png"
+    },
+    {
+      "id": "spec-012",
+      "title": "Fauteuil tantra gonflable type 4",
+      "price": "50 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Fauteuil tantra gonflable type 4.png"
+    },
+    {
+      "id": "spec-013",
+      "title": "Fauteuil tantra solide(non-gonflable) type 1",
+      "price": "90 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Fauteuil tantra solide(non-gonflable) type 1.png"
+    },
+    {
+      "id": "spec-014",
+      "title": "Fauteuil tantra solide(non-gonflable) type 2",
+      "price": "100 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Fauteuil tantra solide(non-gonflable) type 2.png"
+    },
+    {
+      "id": "spec-015",
+      "title": "godmiché ceinturé double entrées electriques",
+      "price": "40 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/godmiché ceinturé double entrées electriques.png"
+    },
+    {
+      "id": "spec-016",
+      "title": "godmiché ceinturé double entrées simple",
+      "price": "50 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/godmiché ceinturé double entrées simple.png"
+    },
+    {
+      "id": "spec-017",
+      "title": "Godmiche ceinturé homme",
+      "price": "30 000  FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Godmiche ceinturé homme.png"
+    },
+    {
+      "id": "spec-018",
+      "title": "Godmiché electrique à pile",
+      "price": "25 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Godmiché electrique à pile.png"
+    },
+    {
+      "id": "spec-019",
+      "title": "Kit complet cat 1",
+      "price": "65 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Kit complet cat 1.png"
+    },
+    {
+      "id": "spec-020",
+      "title": "Kit complet cat 3",
+      "price": "65 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Kit complet cat 3.png"
+    },
+    {
+      "id": "spec-021",
+      "title": "Lingerie erotique Chat1",
+      "price": "16 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Lingerie erotique Chat1.png"
+    },
+    {
+      "id": "spec-022",
+      "title": "Lingerie erotique L1",
+      "price": "13 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Lingerie erotique L1.png"
+    },
+    {
+      "id": "spec-023",
+      "title": "Lingerie erotique L2",
+      "price": "13 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Lingerie erotique L2.png"
+    },
+    {
+      "id": "spec-024",
+      "title": "Lingerie erotique L3",
+      "price": "13 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Lingerie erotique L3.png"
+    },
+    {
+      "id": "spec-025",
+      "title": "Lingerie erotique L4",
+      "price": "11 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Lingerie erotique L4.png"
+    },
+    {
+      "id": "spec-026",
+      "title": "Lingerie erotique L5",
+      "price": "8 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Lingerie erotique L5.png"
+    },
+    {
+      "id": "spec-027",
+      "title": "Lingerie erotique L6",
+      "price": "8 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Lingerie erotique L6.png"
+    },
+    {
+      "id": "spec-028",
+      "title": "Lingerie erotique L7",
+      "price": "8 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Lingerie erotique L7.png"
+    },
+    {
+      "id": "spec-029",
+      "title": "Lingerie erotique L9",
+      "price": "10 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Lingerie erotique L9.png"
+    },
+    {
+      "id": "spec-030",
+      "title": "Lingerie erotique N1",
+      "price": "7 500 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Lingerie erotique N1.png"
+    },
+    {
+      "id": "spec-031",
+      "title": "Lingerie erotique N2",
+      "price": "7 500 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Lingerie erotique N2.png"
+    },
+    {
+      "id": "spec-032",
+      "title": "Lingerie erotique N3",
+      "price": "7 500 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Lingerie erotique N3.png"
+    },
+    {
+      "id": "spec-033",
+      "title": "Masque erot 1",
+      "price": "4000",
+      "image": "images_produits/Articles_commandes_speciales/Masque erot 1.png"
+    },
+    {
+      "id": "spec-034",
+      "title": "Masque erot 2",
+      "price": "6 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Masque erot 2.png"
+    },
+    {
+      "id": "spec-035",
+      "title": "Masque erot 3",
+      "price": "10 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Masque erot 3.png"
+    },
+    {
+      "id": "spec-036",
+      "title": "Masque erot 4",
+      "price": "5 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Masque erot 4.png"
+    },
+    {
+      "id": "spec-037",
+      "title": "Masque erot 5",
+      "price": "4 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Masque erot 5.png"
+    },
+    {
+      "id": "spec-038",
+      "title": "Masque erot 6",
+      "price": "6 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Masque erot 6.png"
+    },
+    {
+      "id": "spec-039",
+      "title": "Masque erot 7",
+      "price": "10 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Masque erot 7.png"
+    },
+    {
+      "id": "spec-040",
+      "title": "Masque erot 8",
+      "price": "10 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Masque erot 8.png"
+    },
+    {
+      "id": "spec-041",
+      "title": "Masque erot 9",
+      "price": "10 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Masque erot 9.png"
+    },
+    {
+      "id": "spec-042",
+      "title": "Masque erot 10",
+      "price": "3500 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Masque erot 10.png"
+    },
+    {
+      "id": "spec-043",
+      "title": "Vibro Masturbateur Auto pro max",
+      "price": "90 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Masturbateur Auto pro,max.png"
+    },
+    {
+      "id": "spec-044",
+      "title": "Vibro Masturbateur max type 1",
+      "price": "35 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Masturbateur max type 1.png"
+    },
+    {
+      "id": "spec-045",
+      "title": "Vibro Masturbateur max type 2",
+      "price": "50 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Masturbateur max type 2.png"
+    },
+    {
+      "id": "spec-046",
+      "title": "Poupée sexuelle femelle  semi-entiere 73cm",
+      "price": "365 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Mini poupée sexuelle femelle 73cm.png"
+    },
+    {
+      "id": "spec-047",
+      "title": "Poupée sexuelle male semi-entiere 60cm",
+      "price": "250 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Mini poupée sexuelle male 60cm.png"
+    },
+    {
+      "id": "spec-048",
+      "title": "poupée sexuelle male 73cm semi entiere",
+      "price": "400 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Mini poupée sexuelle male 73cm.png"
+    },
+    {
+      "id": "spec-049",
+      "title": "Poupe sexuelle femelle entiere 1m4",
+      "price": "956 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Poupe sexuelle femelle entiere 1m4.png"
+    },
+    {
+      "id": "spec-050",
+      "title": "Poupe sexuelle male entiere 1m5",
+      "price": "1 200 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Poupe sexuelle male entiere 1m5.png"
+    },
+    {
+      "id": "spec-051",
+      "title": "Penis electrique sans fil pro",
+      "price": "35 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Penis electrique sans fil pro.png"
+    },
+    {
+      "id": "spec-052",
+      "title": "Pompe à penis electrique",
+      "price": "45 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Pompe à penis electrique.png"
+    },
+    {
+      "id": "spec-053",
+      "title": "Sex machine pro max",
+      "price": "90 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Sex machine pro max.png"
+    },
+    {
+      "id": "spec-054",
+      "title": "Stimulant tetons electrique à fil",
+      "price": "18 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Stimulant tetons electrique à fil.png"
+    },
+    {
+      "id": "spec-055",
+      "title": "Stimulant tetons electrique sans fil",
+      "price": "20 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Stimulant tetons electrique sans fil.png"
+    },
+     {
+      "id": "spec-056",
+      "title": "Vibro oeuf sans fil",
+      "price": "16 000 FCFA",
+      "image": "images_produits/Articles_commandes_speciales/Vibro oeuf sans fil.png"
     }
   ],
   "adult": [
     {
       "id": "adult-001",
-      "title": "Romance Érotique - Collection Numérique",
-      "price": "12.99",
-      "image": "https://pixabay.com/get/g4c6965b728a4d19d4e64c279d709fdb814ab59d44a87274c07f7e55a749c3c8f6e31d545bb84decd205d66c942dbbfd0a3c5c440a63cdec319f2d610fa69f51b_1280.jpg"
+      "title": "TROUBLES D'INTIMITE MASCULINE",
+      "price": "5 300 FCFA",
+      "image": "images_produits/Livres_adultes/TROUBLES D'INTIMITE MASCULINE_20250530_043617_0000.png"
     },
     {
       "id": "adult-002",
-      "title": "Guide Intime - Édition Premium",
-      "price": "19.99",
-      "image": "https://pixabay.com/get/g724ea3794e337cf54c7dcefbceaa222509798f8a520f15890ddea2026482ef0dd16c0b95585edc935535b7aa8dd8ce1cf5c0826f63e4a7593f1b78f3b7a0ccbf_1280.jpg"
+      "title": "50 Nuances de Grey",
+      "price": "10 000 FCFA",
+      "image": "images_produits/Articles_disponibles/KV5.png"
     },
     {
       "id": "adult-003",
-      "title": "Recueil de Nouvelles Adultes",
-      "price": "15.99",
-      "image": "https://pixabay.com/get/gb6d3890341925cffb4fe4a9b48c2292d06565b8b8a27cfa8d5a5c86d462cdebbcb0efb6c0535dcb26c7f51aaeac9b0868d99c1c38ec36a867dd9a4a1538f3a7e_1280.jpg"
+      "title": "American Psycho",
+      "price": "12 000 FCFA",
+      "image": "images/livre3.jpg"
     },
     {
       "id": "adult-004",
-      "title": "Magazine Numérique Premium",
-      "price": "9.99",
-      "image": "https://pixabay.com/get/gd88d2e0937bb94572b02e16877b2353330c4dfb9b7bd1b13009f029248bc45dac81b5306308738dc0168181d94ea8d2fb8ad48d690395b4f805b145cae867dc3_1280.jpg"
+      "title": "American Psycho",
+      "price": "12 000 FCFA",
+      "image": "images/livre3.jpg"
+    },
+    {
+      "id": "adult-005",
+      "title": "American Psycho",
+      "price": "12 000 FCFA",
+      "image": "images/livre3.jpg"
+    },
+    {
+      "id": "adult-006",
+      "title": "American Psycho",
+      "price": "12 000 FCFA",
+      "image": "images/livre3.jpg"
+    },
+    {
+      "id": "adult-007",
+      "title": "American Psycho",
+      "price": "12 000 FCFA",
+      "image": "images/livre3.jpg"
     }
   ]
 }
