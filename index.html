@@ -651,6 +651,11 @@
     </div>
 
     <script>
+        // Génère un identifiant unique pour chaque panier
+        function generateCartId() {
+            return 'cart-' + Date.now() + '-' + Math.floor(Math.random() * 100000);
+        }
+
         class WhatsAppCatalog {
             // Fonction utilitaire pour parser le prix en nombre (supprime espaces et non-chiffres)
             static parsePrice(priceStr) {
@@ -746,6 +751,58 @@
                 this.updateCartUI();
                 this.showAddedToCartFeedback();
             }
+
+            // Checkout avec identifiant unique
+            checkout() {
+                if (this.cart.length === 0) return;
+                // Génère un ID unique
+                const cartId = generateCartId();
+                // Sauvegarde le panier sous la clé unique
+                localStorage.setItem('whatsapp-cart-' + cartId, JSON.stringify(this.cart));
+                // Génère le message WhatsApp avec le lien unique
+                const message = this.createWhatsAppMessage(this.cart, cartId);
+                this.openWhatsApp(message);
+            }
+
+            // Modifie la méthode createWhatsAppMessage pour inclure le lien unique
+            createWhatsAppMessage(items, cartId) {
+                let message = "🛒 *Nouvelle commande*\n\n";
+                items.forEach(item => {
+                    message += `• ${item.title} x${item.quantity} - ${item.price}\n`;
+                });
+                // Calcul du total
+                const total = items.reduce((sum, item) => sum + WhatsAppCatalog.parsePrice(item.price) * item.quantity, 0);
+                message += `\n💰 *Total: ${total.toLocaleString()} FCFA*\n\n`;
+                // Ajoute le lien unique
+                const siteUrl = window.location.origin + window.location.pathname;
+                message += `Voir le panier complet : ${siteUrl}?panier=${cartId}\n`;
+                message += "Merci de confirmer votre commande ! 😊";
+                return encodeURIComponent(message);
+            }
+        // Au chargement, détecte ?panier=<ID> et affiche le panier correspondant
+        function handleCartQuery() {
+            const params = new URLSearchParams(window.location.search);
+            const cartId = params.get('panier');
+            if (cartId) {
+                const cartData = localStorage.getItem('whatsapp-cart-' + cartId);
+                if (cartData) {
+                    if (window.catalog) {
+                        window.catalog.cart = JSON.parse(cartData);
+                        window.catalog.openCart();
+                    } else {
+                        // Si le catalogue n'est pas encore chargé, attendre
+                        const interval = setInterval(() => {
+                            if (window.catalog) {
+                                window.catalog.cart = JSON.parse(cartData);
+                                window.catalog.openCart();
+                                clearInterval(interval);
+                            }
+                        }, 200);
+                    }
+                }
+            }
+        }
+        document.addEventListener('DOMContentLoaded', handleCartQuery);
 
             removeFromCart(productId) {
                 this.cart = this.cart.filter(item => item.id !== productId);
