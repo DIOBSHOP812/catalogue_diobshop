@@ -678,7 +678,12 @@
 
             async loadCatalog() {
                 try {
-                    const response = await fetch('catalog.json');
+                    let catalogPath = './catalog.json';
+                    if (window.location.hostname.endsWith('github.io')) {
+                        const repoName = window.location.pathname.split('/')[1];
+                        catalogPath = `/${repoName}/catalog.json`;
+                    }
+                    const response = await fetch(catalogPath);
                     this.catalog = await response.json();
                 } catch (error) {
                     console.error('Erreur lors du chargement du catalogue:', error);
@@ -825,6 +830,27 @@
             showAddedToCartFeedback() {
                 // Simple feedback animation
                 const cartBtn = document.getElementById('cart-btn');
+            removeFromCart(productId) {
+                this.cart = this.cart.filter(item => item.id !== productId);
+                this.saveCart();
+                this.updateCartUI();
+                this.renderCart();
+            }
+
+            saveCart() {
+                localStorage.setItem('whatsapp-cart', JSON.stringify(this.cart));
+            }
+
+            updateCartUI() {
+                const cartCount = document.getElementById('cart-count');
+                const totalItems = this.cart.length;
+                cartCount.textContent = totalItems;
+                cartCount.style.display = totalItems > 0 ? 'flex' : 'none';
+            }
+
+            showAddedToCartFeedback() {
+                // Simple feedback animation
+                const cartBtn = document.getElementById('cart-btn');
                 cartBtn.style.transform = 'scale(1.1)';
                 setTimeout(() => {
                     cartBtn.style.transform = 'scale(1)';
@@ -843,89 +869,68 @@
             renderCart() {
                 const cartItems = document.getElementById('cart-items');
                 const cartTotal = document.getElementById('cart-total');
-
                 if (this.cart.length === 0) {
-                    cartItems.innerHTML = `
-                        <div class="empty-cart">
-                            <i class="fas fa-shopping-cart"></i>
-                            <p>Votre panier est vide</p>
-                        </div>
-                    `;
-                    cartTotal.innerHTML = '';
+                    cartItems.innerHTML = '<p style="text-align:center;color:#888;">Votre panier est vide.</p>';
+                    cartTotal.textContent = '';
                     return;
                 }
-
-                // Grouper par catégorie
-                const grouped = this.cart.reduce((acc, item) => {
-                    if (!acc[item.category]) acc[item.category] = [];
-                    acc[item.category].push(item);
-                    return acc;
-                }, {});
-
-                let html = '';
-                const categoryNames = {
-                    available: 'Articles Disponibles',
-                    special: 'Articles sur Commande Spéciale',
-                    adult: 'Livres Adultes'
-                };
-
-                Object.entries(grouped).forEach(([category, items]) => {
-                    html += `<div class="category-separator">${categoryNames[category]}</div>`;
-                    items.forEach(item => {
-                        html += `
-                            <div class="cart-item">
-                                <img src="${item.image}" alt="${item.title}">
-                                <div class="cart-item-info">
-                                    <div class="cart-item-title">${item.title}</div>
-                                    <div class="cart-item-price">${item.price}</div>
-                                    <div class="cart-item-category">${categoryNames[category]}</div>
-                                </div>
-                                <button class="remove-item" onclick="catalog.removeFromCart('${item.id}')">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                            </div>
-                        `;
-                    });
-                });
-
-                cartItems.innerHTML = html;
-
-                const total = this.cart.reduce((sum, item) => sum + WhatsAppCatalog.parsePrice(item.price), 0);
-                cartTotal.innerHTML = `Total: ${total.toLocaleString('fr-FR')} FCFA`;
+                let total = 0;
+                cartItems.innerHTML = this.cart.map(item => {
+                    total += WhatsAppCatalog.parsePrice(item.price) * item.quantity;
+                    return `<div class="cart-item">
+                        <span>${item.title} x${item.quantity}</span>
+                        <span>${item.price}</span>
+                        <button class="btn btn-danger" onclick="catalog.removeFromCart('${item.id}')">Retirer</button>
+                    </div>`;
+                }).join('');
+                cartTotal.textContent = `Total : ${total.toLocaleString()} FCFA`;
             }
 
             buyNow(productId, category) {
-                const product = this.catalog[category].find(p => p.id === productId);
-                if (!product) return;
-
-                const message = this.createWhatsAppMessage([{...product, category, quantity: 1}]);
-                this.openWhatsApp(message);
+                this.addToCart(productId, category);
+                this.checkout();
             }
 
             checkout() {
                 if (this.cart.length === 0) return;
-
-                const message = this.createWhatsAppMessage(this.cart);
+                // Génère un ID unique
+                const cartId = generateCartId();
+                // Sauvegarde le panier sous la clé unique
+                localStorage.setItem('whatsapp-cart-' + cartId, JSON.stringify(this.cart));
+                // Génère le message WhatsApp avec le lien unique
+                const message = this.createWhatsAppMessage(this.cart, cartId);
                 this.openWhatsApp(message);
             }
 
-            createWhatsAppMessage(items) {
+            createWhatsAppMessage(items, cartId) {
                 let message = "🛒 *Nouvelle commande*\n\n";
+                items.forEach(item => {
+                    message += `• ${item.title} x${item.quantity} - ${item.price}\n`;
+                });
+                // Calcul du total
+                const total = items.reduce((sum, item) => sum + WhatsAppCatalog.parsePrice(item.price) * item.quantity, 0);
+                message += `\n💰 *Total: ${total.toLocaleString()} FCFA*\n\n`;
+                // Ajoute le lien unique
+                const siteUrl = window.location.origin + window.location.pathname;
+                message += `Voir le panier complet : ${siteUrl}?panier=${cartId}\n`;
+                message += "Merci de confirmer votre commande ! 😊";
+                return encodeURIComponent(message);
+            }
 
-                // Grouper par catégorie
-                const grouped = items.reduce((acc, item) => {
-                    if (!acc[item.category]) acc[item.category] = [];
-                    acc[item.category].push(item);
-                    return acc;
-                }, {});
+            openWhatsApp(message) {
+                const url = `https://wa.me/${this.whatsappNumber.replace(/\D/g, '')}?text=${message}`;
+                if (/Mobi|Android/i.test(navigator.userAgent)) {
+                    window.location.href = url;
+                } else {
+                    window.open(url, '_blank');
+                }
+            }
 
-                const categoryNames = {
-                    available: '📦 *Articles Disponibles*',
-                    special: '⏳ *Articles sur Commande Spéciale*',
-                    adult: '📚 *Livres Adultes*'
-                };
-
-
+            bindEvents() {
+                document.getElementById('checkout-btn').addEventListener('click', () => this.checkout());
+                document.getElementById('close-modal').addEventListener('click', () => this.closeCart());
+                document.getElementById('cart-btn').addEventListener('click', () => this.openCart());
+            }
                 let total = 0;
                 Object.entries(grouped).forEach(([category, categoryItems]) => {
                     message += `${categoryNames[category]}\n`;
